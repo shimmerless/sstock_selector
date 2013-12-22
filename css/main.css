@@ -1,0 +1,152 @@
+html, body
+{
+	margin: 0;
+	padding: 0;
+	min-width:100%;
+}
+
+body
+{
+	background: #ddd url('../images/ss_bg.gif') repeat;
+}
+
+*
+{
+	font-family: 'Raleway', sans-serif;
+}
+
+label
+{
+	cursor: pointer;
+}
+
+label:hover
+{
+	color:#84ace9;
+}
+
+#top-nav
+{
+	padding: 15px;
+	border-bottom: solid 1px #ccc;
+	background: #f2f2f2;
+	text-align: center;
+}
+
+#top-nav h1
+{
+	font-size: 15pt;
+	color: #666;
+	font-weight: 400;
+}
+
+#top-nav span
+{
+	font-size: 9pt;
+	color: #666;
+	text-shadow: 0px 1px 0px #fff;
+}
+
+#browser
+{
+	float:left;
+	border-top: solid 2px #ccc;
+	border-bottom: solid 2px #ccc;
+	width: 100%;
+	background: url('../images/bg-black.png') repeat;
+	margin-top: 50px;
+	box-shadow: 0px 0px 2px #aaa;
+}
+
+.browser-align
+{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#search-container
+{
+	float: left;
+	background: #fff;
+	padding:20px;
+	border-left: solid 2px #5e5e5e;
+	border-right: solid 2px #5e5e5e;
+}
+
+#search-container h2
+{
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 8pt;
+	margin-left: 15px;
+	font-weight: 400;
+	color: #bbb;
+	margin:15px 0px 15px 0px;
+}
+
+#search-text
+{
+	float: left;
+	border: solid 1px #ddd;
+	border-radius: 15px;
+	padding: 10px 10px 10px 40px;
+	letter-spacing: 2px;
+	color: #aaa;
+	background: #fff url('../images/search.png') no-repeat 5% 50%;
+}
+
+#search-cat
+{
+	padding-top:15px;
+	color:#aaa;
+	font-size:9pt;
+	letter-spacing:1px;
+}
+
+#search-cat input[type='radio']
+{
+    display: none;
+}
+
+#search-cat input[type='radio'] + label
+{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    background: url('../images/button.png') left top no-repeat;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+#search-cat input[type='radio']:checked + label
+{
+    background: url('../images/button.png') -15px top no-repeat;
+}
+
+#search-grad
+{
+	height: 100%;
+	float: left;
+	width: 35px;
+	background: url('../images/grad.png') repeat;
+	z-index: 1;
+}
+
+#footer
+{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding:15px 0px 15px 0px;
+	border-top: solid 1px #ccc;
+	text-align: center;
+}
+
+#footer span
+{
+	font-size: 9pt;
+	color: #666;
+	text-shadow: 0px 1px 0px #fff;
+}
