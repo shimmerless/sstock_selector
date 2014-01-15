@@ -53,25 +53,27 @@ label:hover
 	border-top: solid 2px #ccc;
 	border-bottom: solid 2px #ccc;
 	width: 100%;
-	background: url('../images/bg-black.png') repeat;
 	margin-top: 50px;
 	box-shadow: 0px 0px 2px #aaa;
+
+	background-color:#fff;
 }
 
 .browser-align
 {
-	width: 70%;
+	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+	border-left: solid #ccc;
+	border-right: solid #ccc;
+	overflow: hidden;
 }
 
 #search-container
 {
 	float: left;
 	background: #fff;
-	padding:20px;
-	border-left: solid 2px #5e5e5e;
-	border-right: solid 2px #5e5e5e;
+	padding:20px 20px 35px 20px;
 }
 
 #search-container h2
@@ -85,6 +87,14 @@ label:hover
 	margin:15px 0px 15px 0px;
 }
 
+#search-top
+{
+	position:relative;
+	float: left;
+	margin-bottom:15px;
+	z-index: 0;
+}
+
 #search-text
 {
 	float: left;
@@ -94,6 +104,16 @@ label:hover
 	letter-spacing: 2px;
 	color: #aaa;
 	background: #fff url('../images/search.png') no-repeat 5% 50%;
+}
+
+#search-text-go
+{
+	float: left;
+	border: solid 1px #ddd;
+	border-radius: 15px;
+	padding: 10px;
+	color: #999;
+	cursor: pointer;
 }
 
 #search-cat
@@ -109,29 +129,55 @@ label:hover
     display: none;
 }
 
-#search-cat input[type='radio'] + label
+#search-cat input[type='radio'] + label span
 {
     display: inline-block;
     width: 15px;
     height: 15px;
     vertical-align: middle;
     background: url('../images/button.png') left top no-repeat;
-    margin-top:5px;
-    margin-bottom:5px;
+    margin:7px 15px 8px 0px;
 }
 
-#search-cat input[type='radio']:checked + label
+#search-cat input[type='radio']:checked + label span
 {
     background: url('../images/button.png') -15px top no-repeat;
 }
 
 #search-grad
 {
-	height: 100%;
+	position: relative;
 	float: left;
 	width: 35px;
 	background: url('../images/grad.png') repeat;
-	z-index: 1;
+	z-index: 999;
+	opacity:0.05;
+}
+
+#search-results
+{
+	float: left;
+	position: relative;
+	left: -35px;
+	float: left;
+	z-index: 0;
+}
+
+#print-message
+{
+	display: block;
+	margin-left: 80%;
+	margin-top:90px;
+	width: 300px;
+	text-align: center;
+}
+
+#print-message span
+{
+	font-family: 'Old Standard TT', serif;
+	font-size:24px;
+	color:#ccc;
+	text-shadow:0px 1px 1px #ddd;
 }
 
 #footer
@@ -139,7 +185,7 @@ label:hover
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	padding:15px 0px 15px 0px;
+	padding: 15px 0px 15px 0px;
 	border-top: solid 1px #ccc;
 	text-align: center;
 }
