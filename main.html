@@ -10,39 +10,18 @@
 <script src="js/jquery-ui-1.10.3.js"></script>
 <script src="js/bstock_ui.js"></script>
 <script src="js/bstock_api.js"></script>
-<script type='text/javascript'>
-	var grad;
-	var results;
-
-	$(document).ready(function() {
-
-		grad = $('#browser').height();
-		results = $('#browser-align').width();
-
-		$('#search-grad').height(grad-3);
-		$('#search-results').height(grad-3);
-		$('.browser-align').height(grad-3);
-
-		$('#search-results').css({
-
-			'minWidth': results,
-			'maxWidth': '900px'
-
-		});
-
-		$('div#search-results > img').width(grad-3);
-		$('div#search-results > img').height(grad-3);
-
-	});
-</script>
 </head>
 <body>
+	<div id='overlay'>
+	</div>
+	<div id='editing-template'>
+	</div>
 	<!-- top nav box -->
 	<div id='top-nav'>
 		<h1>
 			<a href='http://www.bigstock.com'><img src='images/bs_logo.png' alt='Bigstock' border='0' style='position:relative;top:4px' /></a> Selector <sup>v0.0.1</sup>
 		</h1>
-		<span>This tool allows you to search the Bigstock database (by text, category or tag) and then crop or resize a chosen image.</span>
+		<span>This tool allows you to search the Bigstock database (by text or category) and then crop or resize a chosen image.</span>
 	</div>
 	<!-- search & display features -->
 	<div id='browser'>
@@ -50,24 +29,26 @@
 			<div id='search-container'>
 				<div id='search-top'>
 					<h2>search for&hellip;</h2>
-					<input id='search-text' type='text' />
-					<input id='search-text-go' name='search-text-go' type='button' value='go' />
+					<form id='search-form' name='search-form'>
+						<input id='search-text' type='text' />
+						<input id='search-text-go' name='search-text-go' type='submit' value='go' />
+					</form>
 				</div>
 				<div id='search-cat'>
 					<h2>categories</h2>
-					<input type='radio' name='radio-cat' id='autos' /><label for='autos'><span></span>autos</label><br />
-					<input type='radio' name='radio-cat' id='home' /><label for='home'><span></span>home</label><br />
-					<input type='radio' name='radio-cat' id='furniture' /><label for='furniture'><span></span>furniture</label><br />
-					<input type='radio' name='radio-cat' id='money' /><label for='money'><span></span>money</label>
 				</div>
 			</div>
 			<div id='search-grad'>
 			</div>
 			<div id='search-results'>
-				<div id='print-message'>
-					<span>Search for images you'd like to prepare for high-quality print.</span>
-				</div>
+				<ul id='results-hold'>
+				</ul>
 			</div>
+			<ul class="item-template hide">
+    			<li>
+   				    <a href="#" class="thumbnail"><img></a>
+    			</li>
+			</ul>
 		</div>
 	</div>
 	<div id='footer'>

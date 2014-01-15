@@ -25,6 +25,32 @@ label:hover
 	color:#84ace9;
 }
 
+ul, ol
+{
+	list-style:none;
+}
+
+.hide
+{
+	visibility:hidden;
+}
+
+#overlay
+{
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	background: #000;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter:alpha(opacity=0);
+	display:none;
+	z-index:5;
+	cursor:pointer;
+}
+
 #top-nav
 {
 	padding: 15px;
@@ -146,12 +172,13 @@ label:hover
 
 #search-grad
 {
-	position: relative;
+	display:block;
 	float: left;
 	width: 35px;
 	background: url('../images/grad.png') repeat;
 	z-index: 999;
 	opacity:0.05;
+	height:100%;
 }
 
 #search-results
@@ -180,14 +207,59 @@ label:hover
 	text-shadow:0px 1px 1px #ddd;
 }
 
+#results-hold
+{
+	width:700px;
+}
+
+#results-hold li
+{
+	display:inline-block;
+	float:none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color:#fff;
+	padding:5px;
+	padding-bottom:2px;
+	border:solid #ddd 1px;
+	box-shadow: 0px 1px 2px #ccc;
+	margin:10px;
+}
+
+#results-hold li:hover
+{
+	border:solid #8eb1f1 1px;
+	cursor:pointer;
+}
+
+#editing-template
+{
+	display:none;
+	min-width:50%;
+	min-height:50%;
+	background-color:#fff;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	width: 75%;
+	position: fixed;
+	left: 50%;
+	margin: 0 0 0 -37.5%;
+	top:100px;
+	opacity:0;
+	z-index:500;
+}
+
 #footer
 {
-	position: absolute;
-	bottom: 0;
+	display:block;
+	float:left;
 	width: 100%;
 	padding: 15px 0px 15px 0px;
 	border-top: solid 1px #ccc;
 	text-align: center;
+	margin-top: 50px;
 }
 
 #footer span
