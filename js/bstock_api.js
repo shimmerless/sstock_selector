@@ -157,13 +157,14 @@ $(document).ready(function() {
 
     		    if(data && data.data && data.data.image) {
 
-           		 var detail_template = $(".detail-template");
+           		 var detail_template = $("#editing-template");
 
            		 detail_template.find("img").attr("src",data.data.image.preview.url);
+           		 detail_template.find("img").Jcrop();
 
-           		 detail_template.find("h3").html(data.data.image.title);
+           		 $('#editing-template').find("h3").html(data.data.image.title);
 
-           		 $(".detail-template").modal({backdrop:false});
+           		 $("#editing-template").modal({backdrop:false});
 
            		 e.preventDefault();  
        		}
@@ -172,7 +173,19 @@ $(document).ready(function() {
 
 	});
 
+	function imgClear() {
+
+		$('#crop-img').css({width:0,height:0});
+		$('#crop-img').attr("src", "");
+
+    }
+
 	$('#overlay').on("click", function() {
+
+		JcropAPI = $("#crop-img").data('Jcrop');
+		JcropAPI.destroy();
+
+		imgClear();
 
 		$('#overlay').fadeTo("fast", 0, function() {
 

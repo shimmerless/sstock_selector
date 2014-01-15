@@ -246,9 +246,20 @@ ul, ol
 	position: fixed;
 	left: 50%;
 	margin: 0 0 0 -37.5%;
-	top:100px;
+	top:50px;
 	opacity:0;
 	z-index:500;
+	padding:20px;
+}
+
+#editing-template h3
+{
+	font-family: 'Raleway', serif;
+	font-weight:400;
+	font-size:24px;
+	color:#aaa;
+	border-bottom:solid 1px #eee;
+	text-shadow:0px 1px 2px #eee;
 }
 
 #footer
